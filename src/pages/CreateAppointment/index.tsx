@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
-import { Platform } from 'react-native';
+import { Platform, Alert } from 'react-native';
 import { format } from 'date-fns';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
@@ -121,11 +121,16 @@ const CreateAppointment: React.FC = () => {
       await api.post('appointments', {
         provider_id: selectedProvider,
         date,
-      })
+      });
 
-      navigate('AppointmentCreated', { date: date.getTime()})
+      navigate('AppointmentCreated', { date: date.getTime() });
+    } catch (err) {
+      Alert.alert(
+        'Erro ao criar agendamento',
+        'Ocorreu um erro ao tentar criar o agendamento, tente novamente',
+      );
     }
-  }, [])
+  }, [navigate, selectedDate, selectedHour, selectedProvider]);
 
   const moningAvailability = useMemo(() => {
     return availability
