@@ -157,3 +157,5 @@ export const CreateAppointmentButtonText = styled.Text`
   font-size: 18px;
   color: #232129;
 `;
+
+export const ProfileButton = styled.TouchableOpacity``;

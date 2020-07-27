@@ -20,6 +20,7 @@ import getValidationErrors from '../../utils/getValidationErrors';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import ButtonOut from '../../components/ButtonOut';
 
 import {
   Container,
@@ -250,6 +251,10 @@ const SignUp: React.FC = () => {
               <Button onPress={() => formRef.current?.submitForm()}>
                 Confirmar mudanças
               </Button>
+
+              <ButtonOut onPress={() => formRef.current?.submitForm()}>
+                Deslogar da conta
+              </ButtonOut>
             </Form>
           </Container>
         </ScrollView>
