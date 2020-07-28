@@ -168,7 +168,7 @@ const CreateAppointment: React.FC = () => {
           <Icon name="chevron-left" size={24} color="#999591" />
         </BackButton>
 
-        <HeaderTitle>Cabeleleiros</HeaderTitle>
+        <HeaderTitle>Cabeleireiros</HeaderTitle>
 
         <ProfileButton onPress={navigateToProfile}>
           <UserAvatar source={{ uri: user.avatar_url }} />
