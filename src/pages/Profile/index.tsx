@@ -253,7 +253,7 @@ const SignUp: React.FC = () => {
               </Button>
 
               <ButtonOut onPress={() => formRef.current?.submitForm()}>
-                Deslogar da conta
+                Sair
               </ButtonOut>
             </Form>
           </Container>
