@@ -7,6 +7,7 @@ import {
   Platform,
   TextInput,
   Alert,
+  Linking,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import { useNavigation } from '@react-navigation/native';
@@ -136,9 +137,17 @@ const SignIn: React.FC = () => {
               </Button>
             </Form>
 
-            {/* <ForgotPassword onPress={() => {}}>
+            <ForgotPassword
+              onPress={() => {
+                {
+                  Linking.openURL(
+                    'https://gobarber.bas.inf.br/forgot-password',
+                  );
+                }
+              }}
+            >
               <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
-            </ForgotPassword> */}
+            </ForgotPassword>
           </Container>
         </ScrollView>
       </KeyboardAvoidingView>

@@ -49,6 +49,7 @@ const SignUp: React.FC = () => {
   const oldPasswordInputRef = useRef<TextInput>(null);
   const passwordInputRef = useRef<TextInput>(null);
   const confirmPasswordInputRef = useRef<TextInput>(null);
+  const { signOut } = useAuth();
 
   const handleSignUp = useCallback(
     async (data: ProfileFormData) => {
@@ -252,9 +253,7 @@ const SignUp: React.FC = () => {
                 Confirmar mudanças
               </Button>
 
-              <ButtonOut onPress={() => formRef.current?.submitForm()}>
-                Sair
-              </ButtonOut>
+              <ButtonOut onPress={signOut}>Sair</ButtonOut>
             </Form>
           </Container>
         </ScrollView>
