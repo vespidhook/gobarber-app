@@ -136,9 +136,9 @@ const SignIn: React.FC = () => {
               </Button>
             </Form>
 
-            <ForgotPassword onPress={() => {}}>
+            {/* <ForgotPassword onPress={() => {}}>
               <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
-            </ForgotPassword>
+            </ForgotPassword> */}
           </Container>
         </ScrollView>
       </KeyboardAvoidingView>
